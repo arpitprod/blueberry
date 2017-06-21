@@ -270,7 +270,26 @@ var populateDB = function() {
         userId: 2,
         fromLocation: [73,23],
         toLocation: [88.342543,25.345345]
-    }];
+    },
+    {
+        name: "Ajay",
+        userId: 3,
+        fromLocation: [63,21],
+        toLocation: [82.342543,24.345345]
+    },
+    {
+        name: "Mohan",
+        userId: 4,
+        fromLocation: [71,28],
+        toLocation: [82.342543,29.345345]
+    },
+    {
+        name: "Anurag",
+        userId: 5,
+        fromLocation: [53,29],
+        toLocation: [81.342543,26.345345]
+    }
+    ];
     customer.insertMany(userJsonArray, function(error, docs) {
         console.log(docs);
         console.log('\n=================================================\n');
@@ -343,6 +362,7 @@ var populateDB = function() {
     ];
     cabs.insertMany(cabsJsonArray, function(error, docs) {
         console.log(docs);
+        console.log('\n=================================================\n');
     });
 
 }
