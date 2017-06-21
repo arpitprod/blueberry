@@ -1,0 +1,33 @@
+
+
+POST
+customer requested a cab with source & destination locations and isPink value
+
+http://localhost:8080/api/requestCar?fromLongitude=78&fromLatitude=13&toLongitude=80&toLatitude=15&userId=1&isPink=true
+
+will generate one cabRequest document
+
+
+GET
+cab driver can check requestCar by driverId
+http://localhost:8080/api/requestCar/<driverId>
+
+PUT
+and accept/ reject customer's request  (if request accepted then 'available' will update to false in cabs document)
+http://localhost:8080/api/requestCar/<driverId>?acceptByDriver=false
+
+
+PUT request 
+startTrip and this data update in cabsRequest collection
+http://localhost:8080/api/startTrip/<tripId>
+
+
+PUT request 
+stopTrip after reach and generate total amount
+http://localhost:8080/api/stopTrip/<tripId>
+
+
+PUT request 
+cab driver update his car location and availability true
+http://localhost:8080/api/rideEndByDriver/7
+
